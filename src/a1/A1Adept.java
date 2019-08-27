@@ -39,7 +39,7 @@ public class A1Adept {
 				max_f = first;
 				max_l = last;
 			}
-			else if(spent <= min){
+			if(spent <= min){
 				min = spent;
 				min_f = first;
 				min_l = last;

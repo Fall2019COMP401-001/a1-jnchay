@@ -22,11 +22,15 @@ public class A1Jedi {
 		for(int i = 0; i < people; i ++) {
 			scan.next();
 			scan.next();
+			boolean[] has_bought = new boolean[n];
 			int num_items = scan.nextInt();
 			for(int j = 0; j < num_items; j ++) {
 				int quan = scan.nextInt();
 				String prod = scan.next();
-				num_customers[items.indexOf(prod)] += 1;
+				if(!has_bought[items.indexOf(prod)]) {
+					num_customers[items.indexOf(prod)] += 1;
+					has_bought[items.indexOf(prod)] = true;
+				}
 				num_purchased[items.indexOf(prod)] += quan;
 			}
 		}
